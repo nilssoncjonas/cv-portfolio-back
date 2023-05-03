@@ -2,7 +2,6 @@ import express from "express"
 import project from  './project'
 import { login, refresh, register } from '../controllers/user_controller'
 import { userValidation } from "../validation/user_validation"
-import { validateToken } from "../middlewares/auth/jws"
 // instantiate a new router
 const router = express.Router()
 /**
@@ -28,6 +27,6 @@ router.post('/refresh', refresh)
 /**
  * /project
  */
-router.use('/project', validateToken, project)
+router.use('/project', project)
 
 export default router
