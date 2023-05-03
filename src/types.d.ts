@@ -13,3 +13,10 @@ export type JwtPayload = {
 	iat?: number,
   exp?: number
 }
+
+export type CreateProjectData = {
+	title: string,
+	description: string,
+	course: string,
+	link: JSON
+}
