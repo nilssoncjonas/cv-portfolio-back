@@ -15,7 +15,7 @@ const debug = Debug('backend:project_controller')
 export const index = async (req: Request, res: Response) => {
 
 	try {
-		const projects = await getProjects(req.token.sub)
+		const projects = await getProjects()
 		res.status(200).send({
 			status: "success",
 			data: projects

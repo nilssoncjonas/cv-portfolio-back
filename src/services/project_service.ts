@@ -5,7 +5,7 @@ import { CreateProjectData } from "../types"
  * Get all project
  * @returns 
  */
-export const getProjects = (sub: number) => {
+export const getProjects = () => {
 	return prisma.project.findMany()
 }
 
