@@ -2,7 +2,7 @@ import prisma from "../prisma"
 import { CreateProjectData } from "../types"
 
 /**
- * Get all project
+ * Get all projects
  * @returns 
  */
 export const getProjects = () => {
@@ -22,6 +22,7 @@ export const createProject = (data: CreateProjectData, sub: number) => {
 			description: data.description,
 			course: data.course,
 			link: data.link,
+			image: data.image,
 			User: {
 				connect: {
 					id: sub

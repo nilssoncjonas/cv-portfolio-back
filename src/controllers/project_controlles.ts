@@ -49,7 +49,8 @@ export const store = async (req: Request, res: Response) => {
 			title: validatedData.title,
 			description: validatedData.description,
 			course: validatedData.course,
-			link: validatedData.link
+			link: validatedData.link,
+			image: validatedData.image
 		}, req.token.sub)
 		debug(newProject)
 		res.status(200).send({

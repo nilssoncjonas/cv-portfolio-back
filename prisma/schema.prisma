@@ -16,6 +16,7 @@ model Project {
   description String @db.Text
   course      String
   link        Json   @default("{ }")
+  image       String
   User        User?  @relation(fields: [userId], references: [id])
   userId      Int?   @db.UnsignedInt
 }
