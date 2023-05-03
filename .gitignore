@@ -4,3 +4,7 @@
 # Keep environment variables out of version control
 .env
 notes.md
+/.idea/cv-portfolio-back.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/.gitignore
