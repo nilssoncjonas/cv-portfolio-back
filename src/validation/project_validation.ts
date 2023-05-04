@@ -16,6 +16,13 @@ export const projectValidation = [
 		.trim(),
 	body('link')
 		.isObject()
+		.notEmpty(),
+	body('link.github')
+		.isString()
+		.notEmpty()
+		.trim(),
+	body('link.live')
+		.isString()
 		.notEmpty()
 		.trim(),
 	body('image')
