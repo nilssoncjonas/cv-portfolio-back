@@ -1,5 +1,6 @@
 import prisma from "../prisma"
-import { CreateProjectData } from "../types"
+import { CreateProjectData, UpdateProject } from "../types"
+
 
 /**
  * Get all projects
@@ -29,5 +30,20 @@ export const createProject = (data: CreateProjectData, sub: number) => {
 				}
 			}
 		}
+	})
+}
+
+/**
+ * 
+ * @param projectId 
+ * @param projectData 
+ * @returns 
+ */
+export const updateProjectById = async (projectId: number, projectData: UpdateProject) => {
+	return await prisma.project.update({
+		where: {
+			id: projectId,
+		},
+		data: projectData
 	})
 }

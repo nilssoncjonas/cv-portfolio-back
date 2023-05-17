@@ -21,3 +21,12 @@ export type CreateProjectData = {
 	link: object,
 	image: string
 }
+
+export type UpdateProject = {
+	title?: string,
+	description?: string,
+	course?: string,
+	link?: object,
+	image?: string
+
+}
