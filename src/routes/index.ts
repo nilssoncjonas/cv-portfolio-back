@@ -12,7 +12,7 @@ router.get('/', (req, res) => res.send({message: "Hello, world!"}) )
 /**
  * user reg
  */
-router.post('/register', userValidation, register)
+// router.post('/register', userValidation, register)
 
 /**
  * login
