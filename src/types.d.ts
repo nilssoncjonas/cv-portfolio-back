@@ -18,6 +18,6 @@ export type CreateProjectData = {
 	title: string,
 	description: string,
 	course: string,
-	link: JSON,
+	link: object,
 	image: string
 }
